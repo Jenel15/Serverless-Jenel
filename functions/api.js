@@ -16,7 +16,7 @@ app.use(express.urlencoded({extended: true}));
 
 mongoose
 .connect(dbCloudUrl || dbLocalUrl)
-.then(() => console.log('Connecter to MongoDB'))
+.then(() => console.log('Connected to MongoDB'))
 .catch((error) => console.error('Failed to connect to mongoDB', error));
 
 app.use('/.netlify/functions/api',router);
